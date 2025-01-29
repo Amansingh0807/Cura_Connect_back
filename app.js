@@ -10,6 +10,8 @@ import { errorMiddleware } from "./middlewares/error.js";
 import userRouter from "./router/userRouter.js";
 import appointmentRouter from "./router/appointmentRouter.js";
 import chatRouter from "./router/chatRouter.js";
+import recordRoutes from "./router/recordRoutes.js";
+
 
 const app = express();
 
@@ -47,6 +49,7 @@ app.use("/api/user", userRouter);
 app.use("/api/message", messageRouter);
 app.use("/api/appointment", appointmentRouter);
 app.use("/api/chat", chatRouter);
+app.use("/api/records", recordRoutes);
 
 dbConnection();
 
