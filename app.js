@@ -51,6 +51,7 @@ app.use("/api/appointment", appointmentRouter);
 app.use("/api/chat", chatRouter);
 app.use("/api/records", recordRoutes);
 
+
 dbConnection();
 
 app.use(errorMiddleware);
